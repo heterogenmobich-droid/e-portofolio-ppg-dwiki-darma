@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artefak Produk – E-Portofolio PPG</title>
+  <meta name="description" content="Artefak Pembelajaran PPG Dwiki Darma Saputra – Dokumentasi observasi, modul ajar, dan LKPD Pendidikan Pancasila di SMAN 1 Karangnongko." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ===== PAGE WRAPPER ===== */
+    .page-wrapper {
+      padding-top: 132px;
+      padding-bottom: 60px;
+      min-height: 100vh;
+    }
+
+    /* ===== PAGE HEADER ===== */
+    .art-header {
+      text-align: center;
+      padding: 60px 24px 40px;
+      animation: artFadeUp .7s ease both;
+    }
+    .art-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--purple-main), #6d28d9);
+      color: #fff;
+      font-size: .78rem;
+      font-weight: 700;
+      padding: 8px 22px;
+      border-radius: 50px;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .art-title {
+      font-family: 'Inter', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      color: var(--gray-900);
+      margin-bottom: 16px;
+      line-height: 1.15;
+    }
+    .art-title .text-gradient {
+      background: linear-gradient(135deg, var(--purple-main), #a855f7, #6d28d9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .art-subtitle {
+      font-size: 1rem;
+      color: var(--gray-600);
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    @keyframes artFadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== BENTO INFO GRID ===== */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      max-width: 820px;
+      margin: 0 auto 40px;
+      padding: 0 24px;
+      animation: artFadeUp .7s ease .2s both;
+    }
+    .bento-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #fff;
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 18px 20px;
+      transition: var(--transition);
+      box-shadow: 0 2px 12px rgba(0,0,0,.04);
+    }
+    .bento-item:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--purple-light);
+    }
+    .bento-item .bento-icon {
+      width: 44px; height: 44px;
+      background: var(--purple-pale);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    .bento-item label {
+      font-size: .72rem;
+      font-weight: 600;
+      color: var(--gray-600);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+    .bento-item h3 {
+      font-size: .92rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-top: 2px;
+    }
+
+    /* ===== SECTION DIVIDER ===== */
+    .section-divider {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--purple-light), transparent);
+      max-width: 600px;
+      margin: 32px auto;
+    }
+
+    /* ===== TAB NAVIGATION ===== */
+    .tabs-container {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding: 0 24px;
+      margin-bottom: 48px;
+      animation: artFadeUp .7s ease .4s both;
+    }
+    .tab-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border: 2px solid var(--gray-200);
+      border-radius: 50px;
+      background: #fff;
+      color: var(--gray-700);
+      font-family: 'Inter', sans-serif;
+      font-size: .88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .25s ease;
+    }
+    .tab-btn:hover {
+      border-color: var(--purple-light);
+      color: var(--purple-main);
+      background: var(--purple-pale);
+    }
+    .tab-btn.active {
+      background: linear-gradient(135deg, var(--purple-main), #6d28d9);
+      color: #fff;
+      border-color: transparent;
+      box-shadow: 0 4px 20px rgba(124,58,237,.35);
+    }
+    .tab-btn .tab-icon { font-size: 1rem; }
+
+    /* ===== TAB CONTENT ===== */
+    .tab-content {
+      display: none;
+      animation: tabFade .4s ease;
+    }
+    .tab-content.active { display: block; }
+    @keyframes tabFade {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== TAB SECTION TITLE ===== */
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .section-title h2 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      color: var(--gray-900);
+      margin-bottom: 12px;
+    }
+    .section-title p {
+      font-size: .95rem;
+      color: var(--gray-600);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+
+    /* ===== SCOUT CARDS (Observasi) ===== */
+    .scouting-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto 48px;
+      padding: 0 24px;
+    }
+    .scout-card {
+      background: #fff;
+      border-radius: 20px;
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,.05);
+      transition: var(--transition);
+      display: flex; flex-direction: column;
+    }
+    .scout-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(124,58,237,.15);
+    }
+    .scout-header {
+      padding: 22px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff;
+    }
+    .scout-header .scout-icon {
+      font-size: 1.5rem;
+    }
+    .scout-header h3 {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .bg-gradient-blue { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+    .bg-gradient-purple { background: linear-gradient(135deg, var(--purple-main), #6d28d9); }
+    .bg-gradient-cyan { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+
+    .scout-body {
+      padding: 20px 24px;
+      flex: 1;
+    }
+    .scout-list {
+      list-style: none;
+      display: flex; flex-direction: column;
+      gap: 16px;
+    }
+    .scout-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .scout-list li .s-icon {
+      font-size: 1rem;
+      margin-top: 2px;
+      flex-shrink: 0;
+      color: #22c55e;
+    }
+    .scout-list li .s-icon.warn { color: #f97316; }
+    .scout-list li strong {
+      display: block;
+      font-size: .85rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 2px;
+    }
+    .scout-list li span {
+      font-size: .82rem;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+    .scout-footer {
+      padding: 14px 24px;
+      border-top: 1px solid var(--gray-200);
+      text-align: center;
+    }
+    .scout-tag {
+      display: inline-block;
+      font-size: .75rem;
+      font-weight: 700;
+      color: var(--purple-main);
+      background: var(--purple-pale);
+      padding: 6px 16px;
+      border-radius: 50px;
+    }
+
+    /* ===== DOC CARDS (PDF Embed) ===== */
+    .doc-card {
+      background: #fff;
+      border-radius: 20px;
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+      max-width: 1200px;
+      margin: 0 auto 32px;
+      box-shadow: 0 2px 16px rgba(0,0,0,.05);
+    }
+    .doc-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 22px 28px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--gray-900);
+    }
+    .doc-title .doc-icon { color: #ef4444; font-size: 1.15rem; }
+    .dashed-divider {
+      border: none;
+      border-top: 2px dashed var(--gray-200);
+      margin: 0 28px;
+    }
+    .pdf-container {
+      background: #1a1a2e;
+      margin: 20px 28px;
+      border-radius: 14px;
+      overflow: hidden;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pdf-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .pdf-placeholder {
+      text-align: center;
+      color: rgba(255,255,255,.5);
+      padding: 40px;
+    }
+    .pdf-placeholder .ph-icon { font-size: 3rem; margin-bottom: 16px; display: block; }
+    .pdf-placeholder p { font-size: .9rem; }
+    .pdf-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      padding: 20px 28px 28px;
+      flex-wrap: wrap;
+    }
+    .btn-modern {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 26px;
+      border-radius: 50px;
+      font-family: 'Inter', sans-serif;
+      font-size: .85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all .25s ease;
+      cursor: pointer;
+    }
+    .btn-main {
+      background: linear-gradient(135deg, var(--purple-main), #6d28d9);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(124,58,237,.3);
+    }
+    .btn-main:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(124,58,237,.45);
+    }
+    .btn-sub {
+      background: #fff;
+      color: var(--purple-main);
+      border: 2px solid var(--purple-light);
+    }
+    .btn-sub:hover {
+      background: var(--purple-pale);
+      transform: translateY(-2px);
+    }
+
+    /* ===== ANALYSIS CARDS (Modul Ajar / LKPD) ===== */
+    .analysis-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto 48px;
+      padding: 0 24px;
+    }
+    .analysis-card {
+      position: relative;
+      background: #fff;
+      border-radius: 20px;
+      border: 1px solid var(--gray-200);
+      padding: 28px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,.05);
+      transition: var(--transition);
+    }
+    .analysis-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(124,58,237,.15);
+    }
+
+    .ac-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .ac-icon {
+      width: 42px; height: 42px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .ac-icon.bg-blue { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+    .ac-icon.bg-purple { background: linear-gradient(135deg, var(--purple-main), #6d28d9); }
+    .ac-icon.bg-cyan { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+    .ac-icon.bg-orange { background: linear-gradient(135deg, #f97316, #ea580c); }
+    .ac-header h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--gray-900);
+    }
+    .analysis-card p {
+      font-size: .88rem;
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+
+    /* ===== ZIGZAG REFLEKSI ===== */
+    .zigzag-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px 40px;
+    }
+    .zigzag-row {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .zigzag-row.reverse { flex-direction: row-reverse; }
+    .zz-visual {
+      flex: 0 0 160px;
+    }
+    .zz-card-3d {
+      width: 140px; height: 140px;
+      border-radius: 24px;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0,0,0,.15);
+    }
+    .zz-card-3d .zz-inner {
+      font-size: 2.5rem;
+      animation: floatIcon 3s ease-in-out infinite;
+    }
+    @keyframes floatIcon {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .bg-orange-glow { background: linear-gradient(135deg, #fb923c, #ea580c); }
+    .bg-purple-glow { background: linear-gradient(135deg, var(--purple-light), #6d28d9); }
+    .bg-blue-glow { background: linear-gradient(135deg, #60a5fa, #1d4ed8); }
+    .bg-cyan-glow { background: linear-gradient(135deg, #22d3ee, #0891b2); }
+
+    .zz-content { flex: 1; }
+    .zz-number {
+      display: inline-flex;
+      align-items: center; justify-content: center;
+      width: 36px; height: 36px;
+      background: var(--purple-pale);
+      color: var(--purple-main);
+      font-weight: 800;
+      font-size: .95rem;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+    .zz-content h3 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--gray-900);
+      margin-bottom: 10px;
+    }
+    .zz-content p {
+      font-size: .9rem;
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .bento-grid { grid-template-columns: 1fr; max-width: 400px; }
+      .scouting-grid { grid-template-columns: 1fr; max-width: 500px; }
+      .analysis-grid { grid-template-columns: 1fr; }
+      .zigzag-row, .zigzag-row.reverse {
+        flex-direction: column;
+        text-align: center;
+      }
+      .zz-visual { flex: 0 0 auto; }
+    }
+    @media (max-width: 600px) {
+      .art-header { padding: 40px 16px 28px; }
+      .pdf-container { height: 350px; margin: 16px; }
+      .doc-title { padding: 18px 20px; font-size: .95rem; }
+      .dashed-divider { margin: 0 20px; }
+      .pdf-actions { padding: 16px 20px 24px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand" aria-label="E-Portofolio PPG">
+        <img src="unwidha_logo.png" alt="Logo Universitas Widya Dharma" class="unwidha-logo-img" />
+        <span class="nav-brand-text">
+          <span class="brand-eporto">E-Portofolio</span><span class="brand-ppg"> PPG</span>
+        </span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li class="nav-dropdown">
+          <a href="#" class="nav-dropdown-toggle nav-active" id="eporto1-toggle">E-Portofolio (1) <span class="nav-arrow">&#9662;</span></a>
+          <ul class="nav-dropdown-menu" id="eporto1-menu">
+            <li><a href="artefak-produk.html" class="nav-active"><span>📦</span> Artefak Produk</a></li>
+            <li><a href="penilaian-gp.html"><span>⭐</span> Penilaian GP</a></li>
+            <li><a href="model-guru.html"><span>👨‍🏫</span> Model Guru</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="#" class="nav-dropdown-toggle" id="eporto2-toggle">E-Portofolio (2) <span class="nav-arrow">&#9662;</span></a>
+          <ul class="nav-dropdown-menu" id="eporto2-menu">
+            <li><a href="refleksi.html"><span>📖</span> Refleksi Akhir</a></li>
+            <li><a href="filosofi-mengajar.html"><span>💡</span> Filosofi Mengajar</a></li>
+          </ul>
+        </li>
+        <li><a href="dokumentasi.html">Dokumentasi</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap" id="ticker-bar" aria-label="Highlight Pembelajaran">
+    <div class="ticker-track">
+      <span class="ticker-item"><span class="ticker-emoji">✨</span>Pembelajaran Berdiferensiasi</span>
+      <span class="ticker-dot">★</span>
+      <span class="ticker-item"><span class="ticker-emoji">🚀</span>Pembelajaran Berbasis UbD</span>
+      <span class="ticker-dot">★</span>
+      <span class="ticker-item"><span class="ticker-emoji">🎨</span>Inovasi Media Pembelajaran</span>
+      <span class="ticker-dot">★</span>
+      <span class="ticker-item"><span class="ticker-emoji">🌐</span>Literasi Digital</span>
+      <span class="ticker-dot">★</span>
+      <span class="ticker-item"><span class="ticker-emoji">✨</span>Pembelajaran Berdiferensiasi</span>
+      <span class="ticker-dot">★</span>
+      <span class="ticker-item"><span class="ticker-emoji">🚀</span>Pembelajaran Berbasis UbD</span>
+      <span class="ticker-dot">★</span>
+      <span class="ticker-item"><span class="ticker-emoji">🎨</span>Inovasi Media Pembelajaran</span>
+      <span class="ticker-dot">★</span>
+      <span class="ticker-item"><span class="ticker-emoji">🌐</span>Literasi Digital</span>
+      <span class="ticker-dot">★</span>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="page-wrapper">
+
+    <!-- PAGE HEADER -->
+    <div class="art-header">
+      <span class="art-badge">Kumpulan Artefak PPL 1</span>
+      <h1 class="art-title">Artefak <span class="text-gradient">Pembelajaran</span></h1>
+      <p class="art-subtitle">Dokumentasi komprehensif mulai dari observasi lingkungan belajar, perancangan Modul Ajar dan LKPD, hingga refleksi produk pembelajaran di SMAN 1 Karangnongko.</p>
+    </div>
+
+    <!-- BENTO INFO -->
+    <div class="bento-grid">
+      <div class="bento-item" data-aos="fade-up">
+        <div class="bento-icon">🏫</div>
+        <div>
+          <label>Sekolah Mitra</label>
+          <h3>SMAN 1 Karangnongko</h3>
+        </div>
+      </div>
+      <div class="bento-item" data-aos="fade-up">
+        <div class="bento-icon">📖</div>
+        <div>
+          <label>Mata Pelajaran</label>
+          <h3>Pendidikan Pancasila</h3>
+        </div>
+      </div>
+      <div class="bento-item" data-aos="fade-up">
+        <div class="bento-icon">🎓</div>
+        <div>
+          <label>Penyusun</label>
+          <h3>Dwiki Darma Saputra</h3>
+        </div>
+      </div>
+    </div>
+
+    <hr class="section-divider" />
+
+    <!-- TAB NAVIGATION -->
+    <div class="tabs-container" id="tabs-container">
+      <button class="tab-btn active" data-tab="tab-observasi" onclick="openTab(event, 'tab-observasi')">
+        <span class="tab-icon">🔍</span> Observasi
+      </button>
+      <button class="tab-btn" data-tab="tab-modul" onclick="openTab(event, 'tab-modul')">
+        <span class="tab-icon">📋</span> Modul Ajar
+      </button>
+      <button class="tab-btn" data-tab="tab-lkpd" onclick="openTab(event, 'tab-lkpd')">
+        <span class="tab-icon">📝</span> LKPD
+      </button>
+      <button class="tab-btn" data-tab="tab-media" onclick="openTab(event, 'tab-media')">
+        <span class="tab-icon">🖥️</span> Media Pembelajaran
+      </button>
+    </div>
+
+    <!-- ===================== TAB: OBSERVASI ===================== -->
+    <section id="tab-observasi" class="tab-content active">
+      <div class="section-title">
+        <h2>Observasi Sekolah <span class="text-gradient">& Lingkungan Belajar</span></h2>
+        <p>Laporan hasil pengamatan karakteristik peserta didik, lingkungan belajar, dan budaya sekolah selama pelaksanaan PPL 1.</p>
+      </div>
+
+      <!-- Scout Cards -->
+      <div class="scouting-grid">
+
+        <!-- Card 1: Karakteristik Murid -->
+        <div class="scout-card" data-aos="fade-up">
+          <div class="scout-header bg-gradient-blue">
+            <span class="scout-icon">👥</span>
+            <h3>Karakteristik Murid</h3>
+          </div>
+          <div class="scout-body">
+            <ul class="scout-list">
+              <li>
+                <span class="s-icon">✅</span>
+                <div>
+                  <strong>Keaktifan Belajar:</strong>
+                  <span>Siswa menunjukkan antusiasme tinggi dalam diskusi kelompok tentang isu kebangsaan dan nilai-nilai Pancasila.</span>
+                </div>
+              </li>
+              <li>
+                <span class="s-icon warn">⚠️</span>
+                <div>
+                  <strong>Tantangan Fokus:</strong>
+                  <span>Beberapa siswa masih kurang percaya diri dalam mengekspresikan pendapat tentang penerapan nilai Pancasila di kehidupan sehari-hari.</span>
+                </div>
+              </li>
+              <li>
+                <span class="s-icon">✅</span>
+                <div>
+                  <strong>Gaya Belajar:</strong>
+                  <span>Membutuhkan strategi kontekstual dengan studi kasus nyata kehidupan berbangsa dan bernegara agar keterlibatan terjaga.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="scout-footer">
+            <span class="scout-tag">Target: Pembelajaran Kontekstual</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Lingkungan Sekolah -->
+        <div class="scout-card" data-aos="fade-up">
+          <div class="scout-header bg-gradient-purple">
+            <span class="scout-icon">🏛️</span>
+            <h3>Kultur & Lingkungan Sekolah</h3>
+          </div>
+          <div class="scout-body">
+            <ul class="scout-list">
+              <li>
+                <span class="s-icon">✅</span>
+                <div>
+                  <strong>Lingkungan Fisik:</strong>
+                  <span>Terletak di lingkungan pedesaan yang tenang dan kondusif, mendukung konsentrasi belajar serta interaksi yang hangat.</span>
+                </div>
+              </li>
+              <li>
+                <span class="s-icon">✅</span>
+                <div>
+                  <strong>Sosial & Religius:</strong>
+                  <span>Budaya toleransi dan gotong royong kuat. Terdapat pembiasaan kegiatan keagamaan dan upacara rutin setiap hari Senin.</span>
+                </div>
+              </li>
+              <li>
+                <span class="s-icon warn">⚠️</span>
+                <div>
+                  <strong>Aspek Afektif:</strong>
+                  <span>Perlu peningkatan dalam internalisasi nilai-nilai Pancasila ke dalam perilaku keseharian peserta didik.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="scout-footer">
+            <span class="scout-tag">Target: Penguatan Karakter</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Sarana & Prasarana -->
+        <div class="scout-card" data-aos="fade-up">
+          <div class="scout-header bg-gradient-cyan">
+            <span class="scout-icon">🖥️</span>
+            <h3>Sarana & Prasarana</h3>
+          </div>
+          <div class="scout-body">
+            <ul class="scout-list">
+              <li>
+                <span class="s-icon">✅</span>
+                <div>
+                  <strong>Fasilitas Penunjang:</strong>
+                  <span>Didukung oleh Proyektor LCD, papan tulis whiteboard, dan perpustakaan dengan koleksi buku kewarganegaraan.</span>
+                </div>
+              </li>
+              <li>
+                <span class="s-icon">✅</span>
+                <div>
+                  <strong>Ruang Kelas:</strong>
+                  <span>Setiap kelas memiliki meja dan kursi memadai untuk mendukung diskusi kelompok dan pembelajaran kooperatif.</span>
+                </div>
+              </li>
+              <li>
+                <span class="s-icon warn">⚠️</span>
+                <div>
+                  <strong>Catatan Khusus:</strong>
+                  <span>Keterbatasan akses internet di beberapa area sekolah, perlu disiapkan media pembelajaran cetak sebagai alternatif.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="scout-footer">
+            <span class="scout-tag">Target: Pembelajaran Aktif</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Document A -->
+      <div class="doc-card" data-aos="fade-up">
+        <h3 class="doc-title">
+          <span class="doc-icon">📄</span> A. Laporan Observasi Manajemen Sekolah
+        </h3>
+        <hr class="dashed-divider" />
+        <div class="pdf-container">
+          <iframe src="Artefak Produk/Dwiki Darma Saputra_Observasi Manajemen Sekolah.pdf" title="Laporan Observasi Manajemen Sekolah" loading="lazy"></iframe>
+        </div>
+        <div class="pdf-actions">
+          <a href="Artefak Produk/Dwiki Darma Saputra_Observasi Manajemen Sekolah.pdf" target="_blank" class="btn-modern btn-main">
+            <span>Buka Penuh</span> <span>↗</span>
+          </a>
+          <a href="Artefak Produk/Dwiki Darma Saputra_Observasi Manajemen Sekolah.pdf" download="Dwiki Darma Saputra_Observasi Manajemen Sekolah.pdf" class="btn-modern btn-sub">
+            <span>Unduh File</span> <span>⬇</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Document B -->
+      <div class="doc-card" data-aos="fade-up">
+        <h3 class="doc-title">
+          <span class="doc-icon">📄</span> B. Laporan Observasi Lingkungan Belajar
+        </h3>
+        <hr class="dashed-divider" />
+        <div class="pdf-container">
+          <iframe src="Artefak Produk/Dwiki Darma Saputra_Observasi Lingkungan Belajar.pdf" title="Laporan Observasi Lingkungan Belajar" loading="lazy"></iframe>
+        </div>
+        <div class="pdf-actions">
+          <a href="Artefak Produk/Dwiki Darma Saputra_Observasi Lingkungan Belajar.pdf" target="_blank" class="btn-modern btn-main">
+            <span>Buka Penuh</span> <span>↗</span>
+          </a>
+          <a href="Artefak Produk/Dwiki Darma Saputra_Observasi Lingkungan Belajar.pdf" download="Dwiki Darma Saputra_Observasi Lingkungan Belajar.pdf" class="btn-modern btn-sub">
+            <span>Unduh File</span> <span>⬇</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TAB: MODUL AJAR ===================== -->
+    <section id="tab-modul" class="tab-content">
+      <div class="section-title">
+        <h2>Modul Ajar <span class="text-gradient">Pendidikan Pancasila</span></h2>
+        <p>Dokumen rancangan pembelajaran yang telah disusun dan diterapkan selama pelaksanaan PPL 1 di SMAN 1 Karangnongko.</p>
+      </div>
+
+      <div class="analysis-grid">
+        <div class="analysis-card" data-aos="fade-up">
+          <div class="ac-header">
+            <div class="ac-icon bg-blue">🎯</div>
+            <h3>Konteks Pengembangan</h3>
+          </div>
+          <p>Modul ini disusun untuk merespons karakteristik murid SMAN 1 Karangnongko yang memiliki latar belakang budaya pedesaan yang kuat. Materi difokuskan pada <strong>penerapan nilai-nilai Pancasila</strong> dalam konteks kehidupan sehari-hari masyarakat Karangnongko dengan pendekatan kontekstual.</p>
+        </div>
+        <div class="analysis-card" data-aos="fade-up">
+          <div class="ac-header">
+            <div class="ac-icon bg-purple">🏁</div>
+            <h3>Tujuan Pembelajaran</h3>
+          </div>
+          <p>Membimbing peserta didik agar mampu <strong>memahami, menganalisis, dan mengimplementasikan</strong> nilai-nilai Pancasila secara kontekstual. Selain itu, bertujuan agar peserta didik cakap dalam berpikir kritis terhadap isu-isu kebangsaan serta menerapkan sikap toleransi dan gotong royong.</p>
+        </div>
+        <div class="analysis-card" data-aos="fade-up">
+          <div class="ac-header">
+            <div class="ac-icon bg-cyan">⭐</div>
+            <h3>Kelebihan Pendekatan</h3>
+          </div>
+          <p>Mengadopsi pendekatan <strong>Problem-Based Learning (PBL)</strong> yang dipadukan dengan studi kasus lokal. Desain instruksional ini memuat langkah-langkah yang jelas dengan <strong>integrasi pembelajaran berdiferensiasi</strong>, sehingga pembelajaran tidak monoton dan berpusat pada peserta didik.</p>
+        </div>
+        <div class="analysis-card" data-aos="fade-up">
+          <div class="ac-header">
+            <div class="ac-icon bg-orange">⚠️</div>
+            <h3>Tantangan Pelaksanaan</h3>
+          </div>
+          <p>Kendala utama terletak pada <strong>ketersediaan media digital</strong> yang terbatas di lingkungan sekolah. Diperlukan kreativitas dalam menyiapkan media pembelajaran cetak dan aktivitas <strong>role-playing</strong> untuk memvisualisasikan penerapan nilai Pancasila di berbagai situasi.</p>
+        </div>
+      </div>
+
+      <!-- Modul Ajar Document 1 -->
+      <div class="doc-card" data-aos="fade-up">
+        <h3 class="doc-title">
+          <span class="doc-icon">📄</span> Pratinjau Dokumen Modul Ajar (Bagian 1)
+        </h3>
+        <hr class="dashed-divider" />
+        <div class="pdf-container">
+          <iframe src="Artefak Produk/Pertemuan 1_Modul Ajar_Dwiki Darma Saputra.pdf" title="Modul Ajar 1" loading="lazy"></iframe>
+        </div>
+        <div class="pdf-actions">
+          <a href="Artefak Produk/Pertemuan 1_Modul Ajar_Dwiki Darma Saputra.pdf" target="_blank" class="btn-modern btn-main">
+            <span>Buka Penuh</span> <span>↗</span>
+          </a>
+          <a href="Artefak Produk/Pertemuan 1_Modul Ajar_Dwiki Darma Saputra.pdf" download="Pertemuan 1_Modul Ajar_Dwiki Darma Saputra.pdf" class="btn-modern btn-sub">
+            <span>Unduh File</span> <span>⬇</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Modul Ajar Document 2 -->
+      <div class="doc-card" data-aos="fade-up">
+        <h3 class="doc-title">
+          <span class="doc-icon">📄</span> Pratinjau Dokumen Modul Ajar (Bagian 2)
+        </h3>
+        <hr class="dashed-divider" />
+        <div class="pdf-container">
+          <iframe src="Artefak Produk/Pertemuan 2_Modul Ajar_Dwiki Darma Saputra.pdf" title="Modul Ajar 2" loading="lazy"></iframe>
+        </div>
+        <div class="pdf-actions">
+          <a href="Artefak Produk/Pertemuan 2_Modul Ajar_Dwiki Darma Saputra.pdf" target="_blank" class="btn-modern btn-main">
+            <span>Buka Penuh</span> <span>↗</span>
+          </a>
+          <a href="Artefak Produk/Pertemuan 2_Modul Ajar_Dwiki Darma Saputra.pdf" download="Pertemuan 2_Modul Ajar_Dwiki Darma Saputra.pdf" class="btn-modern btn-sub">
+            <span>Unduh File</span> <span>⬇</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Modul Ajar Document 3 -->
+      <div class="doc-card" data-aos="fade-up">
+        <h3 class="doc-title">
+          <span class="doc-icon">📄</span> Pratinjau Dokumen Modul Ajar (Bagian 3)
+        </h3>
+        <hr class="dashed-divider" />
+        <div class="pdf-container">
+          <iframe src="Artefak Produk/Pertemuan 3_Modul Ajar_Dwiki Darma Saputra.pdf" title="Modul Ajar 3" loading="lazy"></iframe>
+        </div>
+        <div class="pdf-actions">
+          <a href="Artefak Produk/Pertemuan 3_Modul Ajar_Dwiki Darma Saputra.pdf" target="_blank" class="btn-modern btn-main">
+            <span>Buka Penuh</span> <span>↗</span>
+          </a>
+          <a href="Artefak Produk/Pertemuan 3_Modul Ajar_Dwiki Darma Saputra.pdf" download="Pertemuan 3_Modul Ajar_Dwiki Darma Saputra.pdf" class="btn-modern btn-sub">
+            <span>Unduh File</span> <span>⬇</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TAB: LKPD ===================== -->
+    <section id="tab-lkpd" class="tab-content">
+      <div class="section-title">
+        <h2>Lembar Kerja Peserta Didik <span class="text-gradient">(LKPD)</span></h2>
+        <p>Panduan kolaboratif berbasis Project-Based Learning (PjBL) yang dirancang untuk membimbing peserta didik SMAN 1 Karangnongko dalam menganalisis dan menerapkan nilai-nilai Pancasila secara kreatif.</p>
+      </div>
+
+      <div class="analysis-grid">
+        <div class="analysis-card" data-aos="fade-up">
+          <div class="ac-header">
+            <div class="ac-icon bg-blue">🎯</div>
+            <h3>Konteks Pengembangan</h3>
+          </div>
+          <p>LKPD ini disusun sebagai panduan operasional pada <strong>kegiatan diskusi dan proyek kelompok</strong>. Didesain secara spesifik untuk memfasilitasi proses analisis kasus pelanggaran dan penerapan nilai Pancasila di lingkungan masyarakat sekitar.</p>
+        </div>
+        <div class="analysis-card" data-aos="fade-up">
+          <div class="ac-header">
+            <div class="ac-icon bg-purple">🏁</div>
+            <h3>Tujuan Instruksional</h3>
+          </div>
+          <p>Memandu peserta didik dalam mengidentifikasi dan menganalisis permasalahan sosial melalui <strong>pembagian peran yang adil dalam tim</strong> (Ketua, Pencari Data, Penyusun, Presenter). Melatih keterampilan kolaboratif dan berpikir kritis berbasis nilai kebangsaan.</p>
+        </div>
+        <div class="analysis-card" data-aos="fade-up">
+          <div class="ac-header">
+            <div class="ac-icon bg-cyan">⭐</div>
+            <h3>Kelebihan Lembar Kerja</h3>
+          </div>
+          <p>Formatnya sangat <strong>sistematis dan berbasis alur (step-by-step)</strong>. Dengan adanya kolom pengisian spesifik (Identifikasi Masalah, Analisis Nilai, Solusi Kontekstual), pemikiran peserta didik lebih terarah dan kolaborasi antaranggota menjadi lebih terukur dan produktif.</p>
+        </div>
+        <div class="analysis-card" data-aos="fade-up">
+          <div class="ac-header">
+            <div class="ac-icon bg-orange">⚠️</div>
+            <h3>Tantangan Pengerjaan</h3>
+          </div>
+          <p>Tantangan utamanya adalah <strong>alokasi waktu saat berdiskusi</strong>. Peserta didik sering kali terlalu lama berdebat di fase identifikasi masalah, sehingga guru perlu proaktif berkeliling sebagai fasilitator untuk memastikan setiap kelompok tetap berpegang pada timeline LKPD.</p>
+        </div>
+      </div>
+
+      <!-- LKPD Document 1 -->
+      <div class="doc-card" data-aos="fade-up">
+        <h3 class="doc-title">
+          <span class="doc-icon">📄</span> Pratinjau Dokumen LKPD (Bagian 1)
+        </h3>
+        <hr class="dashed-divider" />
+        <div class="pdf-container">
+          <iframe src="Artefak Produk/LKPD 1_Dwiki Darma Saputra.pdf" title="LKPD 1" loading="lazy"></iframe>
+        </div>
+        <div class="pdf-actions">
+          <a href="Artefak Produk/LKPD 1_Dwiki Darma Saputra.pdf" target="_blank" class="btn-modern btn-main">
+            <span>Buka Penuh</span> <span>↗</span>
+          </a>
+          <a href="Artefak Produk/LKPD 1_Dwiki Darma Saputra.pdf" download="LKPD 1_Dwiki Darma Saputra.pdf" class="btn-modern btn-sub">
+            <span>Unduh File</span> <span>⬇</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- LKPD Document 2 -->
+      <div class="doc-card" data-aos="fade-up">
+        <h3 class="doc-title">
+          <span class="doc-icon">📄</span> Pratinjau Dokumen LKPD (Bagian 2)
+        </h3>
+        <hr class="dashed-divider" />
+        <div class="pdf-container">
+          <iframe src="Artefak Produk/LKPD 2_Dwiki Darma Saputra.pdf" title="LKPD 2" loading="lazy"></iframe>
+        </div>
+        <div class="pdf-actions">
+          <a href="Artefak Produk/LKPD 2_Dwiki Darma Saputra.pdf" target="_blank" class="btn-modern btn-main">
+            <span>Buka Penuh</span> <span>↗</span>
+          </a>
+          <a href="Artefak Produk/LKPD 2_Dwiki Darma Saputra.pdf" download="LKPD 2_Dwiki Darma Saputra.pdf" class="btn-modern btn-sub">
+            <span>Unduh File</span> <span>⬇</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- LKPD Document 3 -->
+      <div class="doc-card" data-aos="fade-up">
+        <h3 class="doc-title">
+          <span class="doc-icon">📄</span> Pratinjau Dokumen LKPD (Bagian 3)
+        </h3>
+        <hr class="dashed-divider" />
+        <div class="pdf-container">
+          <iframe src="Artefak Produk/LKPD 3_Dwiki Darma Saputra.pdf" title="LKPD 3" loading="lazy"></iframe>
+        </div>
+        <div class="pdf-actions">
+          <a href="Artefak Produk/LKPD 3_Dwiki Darma Saputra.pdf" target="_blank" class="btn-modern btn-main">
+            <span>Buka Penuh</span> <span>↗</span>
+          </a>
+          <a href="Artefak Produk/LKPD 3_Dwiki Darma Saputra.pdf" download="LKPD 3_Dwiki Darma Saputra.pdf" class="btn-modern btn-sub">
+            <span>Unduh File</span> <span>⬇</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TAB: MEDIA PEMBELAJARAN ===================== -->
+    <section id="tab-media" class="tab-content">
+      <div class="section-title">
+        <h2>Media <span class="text-gradient">Pembelajaran</span></h2>
+        <p>Kumpulan media interaktif dan materi visual yang digunakan untuk mendukung pembelajaran Pendidikan Pancasila di SMAN 1 Karangnongko.</p>
+      </div>
+
+      <div class="analysis-grid">
+        <div class="analysis-card" data-aos="fade-up">
+          <div class="ac-header">
+            <div class="ac-icon bg-blue">🎯</div>
+            <h3>Konteks Pengembangan</h3>
+          </div>
+          <p>Media ini dikembangkan untuk memvisualisasikan konsep abstrak dalam Pendidikan Pancasila menjadi lebih nyata dan mudah dipahami, menyesuaikan dengan kebutuhan visual peserta didik.</p>
+        </div>
+        <div class="analysis-card" data-aos="fade-up">
+          <div class="ac-header">
+            <div class="ac-icon bg-purple">🏁</div>
+            <h3>Tujuan Instruksional</h3>
+          </div>
+          <p>Meningkatkan keterlibatan aktif dan ketertarikan peserta didik dalam proses pembelajaran melalui sajian informasi yang menarik, interaktif, dan dekat dengan kehidupan sehari-hari.</p>
+        </div>
+        <div class="analysis-card" data-aos="fade-up">
+          <div class="ac-header">
+            <div class="ac-icon bg-cyan">⭐</div>
+            <h3>Kelebihan Media</h3>
+          </div>
+          <p>Memanfaatkan elemen visual yang kuat serta navigasi interaktif. Media ini dapat diakses berulang kali oleh peserta didik baik secara mandiri maupun berkelompok.</p>
+        </div>
+        <div class="analysis-card" data-aos="fade-up">
+          <div class="ac-header">
+            <div class="ac-icon bg-orange">⚠️</div>
+            <h3>Tantangan Pemanfaatan</h3>
+          </div>
+          <p>Membutuhkan perangkat penunjang (proyektor/smartphone) dan koneksi internet yang stabil untuk mengakses media interaktif secara maksimal selama di dalam kelas.</p>
+        </div>
+      </div>
+
+      <!-- Media Document 1 -->
+      <div class="doc-card" data-aos="fade-up">
+        <h3 class="doc-title">
+          <span class="doc-icon">📄</span> Pratinjau Media Pembelajaran
+        </h3>
+        <hr class="dashed-divider" />
+        <div class="pdf-container">
+          <iframe src="Artefak Produk/Dwiki Darma Saputra_Media Pembelajaran_Kelas XI.pdf" title="Media 1" loading="lazy"></iframe>
+        </div>
+        <div class="pdf-actions">
+          <a href="Artefak Produk/Dwiki Darma Saputra_Media Pembelajaran_Kelas XI.pdf" target="_blank" class="btn-modern btn-main">
+            <span>Buka Penuh</span> <span>↗</span>
+          </a>
+          <a href="Artefak Produk/Dwiki Darma Saputra_Media Pembelajaran_Kelas XI.pdf" download="Dwiki Darma Saputra_Media Pembelajaran_Kelas XI.pdf" class="btn-modern btn-sub">
+            <span>Unduh File</span> <span>⬇</span>
+          </a>
+        </div>
+      </div>
+
+
+    </section>
+
+    <!-- ===================== ANALISIS & REFLEKSI ===================== -->
+    <hr class="section-divider" />
+
+    <section id="refleksi-produk" data-aos="fade-up">
+      <div class="section-title" style="margin-bottom: 56px;">
+        <h2 style="font-size: clamp(1.8rem, 4vw, 2.5rem);">Analisis & Refleksi<br><span class="text-gradient">Produk Pembelajaran</span></h2>
+        <p>Evaluasi mendalam terhadap proses perancangan, implementasi, hingga penyesuaian perangkat ajar Pendidikan Pancasila.</p>
+      </div>
+
+      <div class="zigzag-section">
+
+        <!-- A: Kendala -->
+        <div class="zigzag-row" data-aos="fade-up">
+          <div class="zz-visual">
+            <div class="zz-card-3d bg-orange-glow">
+              <div class="zz-inner">🔗</div>
+            </div>
+          </div>
+          <div class="zz-content">
+            <div class="zz-number">A</div>
+            <h3>Kendala Penyusunan</h3>
+            <p>Keterbatasan waktu dalam merumuskan <strong>instrumen penilaian (rubrik) yang komprehensif</strong> untuk mengukur aspek kognitif, afektif, dan psikomotorik secara akurat. Selain itu, menyelaraskan materi Pendidikan Pancasila dengan konteks lokal Karangnongko membutuhkan riset lapangan yang mendalam dan konsultasi intensif dengan guru pamong.</p>
+          </div>
+        </div>
+
+        <!-- B: Teori -->
+        <div class="zigzag-row reverse" data-aos="fade-up">
+          <div class="zz-visual">
+            <div class="zz-card-3d bg-purple-glow">
+              <div class="zz-inner">💡</div>
+            </div>
+          </div>
+          <div class="zz-content">
+            <div class="zz-number">B</div>
+            <h3>Teori & Konsep Pedagogi</h3>
+            <p>Rancangan ini mengadopsi model <strong>Problem-Based Learning (PBL)</strong> yang dipadukan dengan pendekatan <strong>Understanding by Design (UbD)</strong>. Pendekatan ini juga diperkuat dengan prinsip <em>Pembelajaran Berdiferensiasi</em>, memberikan ruang bagi peserta didik untuk mengeksplorasi nilai-nilai Pancasila sesuai konteks dan pengalaman hidup masing-masing.</p>
+          </div>
+        </div>
+
+        <!-- C: Keberhasilan -->
+        <div class="zigzag-row" data-aos="fade-up">
+          <div class="zz-visual">
+            <div class="zz-card-3d bg-blue-glow">
+              <div class="zz-inner">📈</div>
+            </div>
+          </div>
+          <div class="zz-content">
+            <div class="zz-number">C</div>
+            <h3>Faktor Keberhasilan</h3>
+            <p>Dukungan penuh dari guru pamong dan lingkungan sekolah yang kondusif menjadi fondasi utama. Namun, pendorong utama keberhasilan praktik ini adalah <strong>antusiasme peserta didik</strong> terhadap diskusi isu-isu sosial kontekstual, didukung dengan pembagian peran terstruktur dalam kelompok yang mencegah adanya siswa pasif.</p>
+          </div>
+        </div>
+
+        <!-- D: Penyesuaian -->
+        <div class="zigzag-row reverse" data-aos="fade-up">
+          <div class="zz-visual">
+            <div class="zz-card-3d bg-cyan-glow">
+              <div class="zz-inner">⚙️</div>
+            </div>
+          </div>
+          <div class="zz-content">
+            <div class="zz-number">D</div>
+            <h3>Perubahan & Penyesuaian</h3>
+            <p>Berdasarkan evaluasi, kelas dengan tingkat daya fokus yang lebih rendah memerlukan penyesuaian signifikan. Komponen yang diubah meliputi <strong>penyederhanaan durasi fase diskusi</strong> serta penyisipan aktivitas <em>ice-breaking</em> dan <em>role-playing</em> yang terjadwal di pertengahan sesi untuk menjaga energi dan konsentrasi kelas tetap optimal.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-new">
+    <div class="footer-top">
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <img src="unwidha_logo.png" alt="Logo Unwidha" class="footer-logo-img" />
+            <span class="footer-brand-name"><span class="fb-eporto">E-Portofolio</span><span class="fb-ppg"> PPG</span></span>
+          </div>
+          <p class="footer-desc">Portal resmi dokumentasi artefak dan refleksi Program Pendidikan Profesi Guru (PPG) Prajabatan bidang studi Pendidikan Pancasila di Universitas Widya Dharma.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/ikdrsptra_/" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/dwikidarmasaputra080502" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">E-Portofolio</h4>
+          <ul class="footer-links">
+            <li><a href="artefak-produk.html">Artefak Produk</a></li>
+            <li><a href="penilaian-gp.html">Penilaian GP</a></li>
+            <li><a href="model-guru.html">Model Guru</a></li>
+            <li><a href="refleksi.html">Refleksi Akhir</a></li>
+            <li><a href="filosofi-mengajar.html">Filosofi Mengajar</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">LPTK Kami</h4>
+          <a href="https://maps.app.goo.gl/tfwrJ8PoLEfRgoeG6" target="_blank" rel="noopener" class="footer-lptk-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Universitas Widya Dharma
+          </a>
+          <div class="footer-map-embed">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.697!2d110.6047!3d-7.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a3c1b3e000001%3A0x1!2sUniversitas+Widya+Dharma+Klaten!5e0!3m2!1sid!2sid!4v1" width="100%" height="140" style="border:0; border-radius:10px; opacity:.85;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 E-Portofolio PPG Prajabatan Pendidikan Pancasila | Dwiki Darma Saputra</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // ===== TAB SWITCHING WITH HASH NAVIGATION =====
+    function openTab(evt, tabId) {
+      // Hide all tab contents
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      // Deactivate all tab buttons
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+
+      // Show selected tab
+      const tabEl = document.getElementById(tabId);
+      if (tabEl) tabEl.classList.add('active');
+
+      // Activate clicked button
+      if (evt && evt.currentTarget) {
+        evt.currentTarget.classList.add('active');
+      } else {
+        // Activate button by data-tab attribute
+        document.querySelectorAll('.tab-btn').forEach(b => {
+          if (b.getAttribute('data-tab') === tabId) b.classList.add('active');
+        });
+      }
+
+      // Update URL hash without scrolling
+      history.replaceState(null, null, '#' + tabId.replace('tab-', ''));
+    }
+
+    // ===== READ HASH ON LOAD / REFRESH =====
+    function initTabFromHash() {
+      const hash = window.location.hash.replace('#', '');
+      const tabMap = {
+        'observasi': 'tab-observasi',
+        'modul-ajar': 'tab-modul',
+        'modul': 'tab-modul',
+        'lkpd': 'tab-lkpd',
+        'media': 'tab-media'
+      };
+      const targetTab = tabMap[hash];
+      if (targetTab) {
+        openTab(null, targetTab);
+      }
+    }
+
+    // Init on DOM ready
+    document.addEventListener('DOMContentLoaded', initTabFromHash);
+    // Also handle back/forward navigation
+    window.addEventListener('hashchange', initTabFromHash);
+  </script>
+
+</body>
+</html>
